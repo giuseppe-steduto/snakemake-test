@@ -568,6 +568,7 @@ class CPUExecutor(RealExecutor):
         """
         Either retrieve result from cache, or run job with given function.
         """
+        import wdb; wdb.set_trace()
         to_cache = self.workflow.is_cached_rule(job.rule)
         try:
             if to_cache:

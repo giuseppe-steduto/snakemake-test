@@ -531,6 +531,7 @@ class JobScheduler:
     def run(self, jobs, executor=None):
         if executor is None:
             executor = self._executor
+        import wdb; wdb.set_trace()
         executor.run_jobs(
             jobs,
             callback=self._finish_callback,
